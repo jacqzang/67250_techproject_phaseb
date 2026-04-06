@@ -114,7 +114,13 @@ function showForm() {
 
 function toggleNav() {
     var nav = document.querySelector(".nav_bar");
+    var hamburger = document.getElementById("hamburger");
     nav.classList.toggle("responsive");
+    if (nav.classList.contains("responsive")) {
+        hamburger.innerHTML = "✕";
+    } else {
+        hamburger.innerHTML = "☰";
+    }
 }
 
 var map = L.map('map').setView([40.4444, -79.9606], 13);
