@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jacqueline Zang">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>MonoMuse - Exhibitions</title>
+    <link rel="stylesheet" href="../static/style.css">   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+            <h1>MonoMuse</h1>
+        </header>
+
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a class="cta" href="tickets.html">Buy Tickets</a>
+            <button id="hamburger" onclick="toggleNav()">☰</button>
+        </nav>
+
+        <main class="main">
+            <h1 class="exhibitions-title">Exhibitions</h1>
+
+            <div class="exhibitions-slider">
+                <button class="slider-btn left" onclick="slideLeft()">&#8249;</button>
+                
+                <div class="exhibitions-track-wrapper">
+                    <div class="exhibitions-track" id="exhibitionsTrack">
+                        
+                        <div class="exhibition-card">
+                            <img src="../static/artalgorithms.png" alt="Digital Dreams">
+                            <h3>Digital Dreams: Art in the Age of Algorithms</h3>
+                            <p class="exhibition-date">March 15 - June 30, 2026</p>
+                            <p class="exhibition-desc">This exhibition explores how artists are using algorithms, artificial intelligence, and generative tools to create new forms of digital expression.</p>
+                        </div>
+
+                        <div class="exhibition-card">
+                            <img src="../static/digitalinstallments.png" alt="Code and Canvas">
+                            <h3>Code & Canvas: The Language of Creative Technology</h3>
+                            <p class="exhibition-date">April 1 - August 15, 2026</p>
+                            <p class="exhibition-desc">Code & Canvas highlights the ways programming has become a medium for artistic creation, featuring installations, projections, and interactive pieces.</p>
+                        </div>
+
+                        <div class="exhibition-card">
+                            <img src="../static/artneuro.png" alt="Human Algorithm">
+                            <h3>The Human Algorithm: Art Meets Neuroscience</h3>
+                            <p class="exhibition-date">May 10 - September 20, 2026</p>
+                            <p class="exhibition-desc">This exhibition explores the fascinating intersection of human cognition and artificial intelligence through immersive installations and interactive displays.</p>
+                        </div>
+
+                        <div class="exhibition-card">
+                            <img src="../static/landscapeart.png" alt="Digital Horizons">
+                            <h3>Digital Horizons: Visions of Tomorrow</h3>
+                            <p class="exhibition-date">June 5 - October 30, 2026</p>
+                            <p class="exhibition-desc">Digital Horizons invites visitors to imagine the future through the eyes of today's most visionary digital artists, from virtual landscapes to data portraits.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="slider-btn right" onclick="slideRight()">&#8250;</button>
+            </div>
+        </main>
+
+        <footer class="footer">© <p id="copyYear"></p> MonoMuse. All rights reserved.</footer>
+
+    </div>
+</body>
+</html>
