@@ -1,0 +1,168 @@
+* {
+    padding: 5px;
+    margin: 5px;
+    background: #ffffff;
+    color: #0b0b0c;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    color: #FED843;
+}
+
+h2 {
+    color: #62B3F7;
+}
+
+h3 {
+    color: #FC6C55;
+}
+
+#logo {
+    width: 18%;
+    display: block;
+}
+
+header {
+    background-color: #ffffff;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0b0b0c;
+    font-weight: 400;
+    padding: 8px 10px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+}
+
+nav a:hover {
+    border: 1px solid #915CE5;
+}
+
+.active {
+    font-weight: bold;
+    border: 1px solid #0b0b0c;
+}
+
+.cta {
+    background-color: #FC6C55;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.cta:hover {
+    border: 1px solid #915CE5;
+    background-color: #FC6C55;
+    color: #ffffff;
+}
+
+footer {
+    padding: 18px 16px;
+    text-align: center;
+    color: #62B3F7;
+}
+
+#copyYear {
+    display: inline;
+    color: #62B3F7;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: fit-content;
+}
+
+tr:nth-child(even) td {
+    background-color: #d8cdff;
+}
+
+form * {
+  margin: auto;
+  text-align: center;
+}
+
+
+.container {
+  display: grid; /* Turns this div into a CSS Grid layout */
+  grid-template-areas:   /* Defines the layout structure */
+    'header header'
+    'nav_bar nav_bar'
+    'main main-img'
+    'footer footer';
+}
+
+/* Places each element into the correct area of the grid */
+.header {
+   grid-area: header; 
+}
+
+.nav_bar {
+   grid-area: nav_bar;
+   display: flex; /* Uses Flexbox for internal layout */
+   justify-content: right;  
+}
+
+.main {
+  grid-area: main; 
+}
+.main_img {
+   grid-area: main-img; 
+}
+.footer {
+   grid-area: footer;
+}
+
+
+#longIntro {
+    display: none;
+}
+
+#readLess {
+    display: none;
+}
+
+#readMore, #readLess {
+    cursor: pointer;
+    color: #915CE5;
+    font-weight: bold;
+}
+
+#purchaseForm {
+    display: none;
+}
+
+@media (max-width: 650px) {
+    .nav_bar a {
+        display: none;
+    }
+    .nav_bar a:first-child {
+        display: block;
+    }
+    #hamburger {
+        display: block;
+    }
+    .nav_bar.responsive a {
+        display: block;
+    }
+}
+
+
+#hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#map { height: 220px; }
