@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jacqueline Zang">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>MonoMuse - Membership</title>  
+    <link rel="stylesheet" href="../static/style.css">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+
+        <header class="header"> 
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+            <h1>MonoMuse</h1>
+        </header>
+
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a class="cta" href="tickets.html">Buy Tickets</a>
+            <a href="membership.html">Membership</a>
+            <button id="hamburger" onclick="toggleNav()">☰</button>
+        </nav>
+
+        <main class="main">
+
+            <div class="membership-top">
+                <h1>Become a Member</h1>
+                <p>Join MonoMuse and enjoy unlimited access to world-class exhibitions, exclusive events, and special benefits designed for art enthusiasts like you.</p>
+            </div>
+
+            <h2 class="membership-levels-title">Membership Levels</h2>
+
+            <div class="membership-cards">
+
+                <div class="membership-card" style="border-color: #62B3F7;">
+                    <h3 style="color: #62B3F7;">Individual</h3>
+                    <p class="membership-price" style="color: #62B3F7;">$50</p>
+                    <p class="membership-per">per year</p>
+                    <ul class="membership-benefits">
+                        <li>✓ Unlimited general admission</li>
+                        <li>✓ Members-only previews</li>
+                        <li>✓ 10% discount at museum shop</li>
+                        <li>✓ Quarterly newsletter</li>
+                        <li>✓ Free coat check</li>
+                    </ul>
+                    <button class="membership-btn" style="background-color: #62B3F7;" onclick="showMembershipForm('Individual')">Choose Individual</button>
+                </div>
+
+                <div class="membership-card popular" style="border-color: #915CE5;">
+                    <span class="popular-badge">Most Popular</span>
+                    <h3 style="color: #915CE5;">Family</h3>
+                    <p class="membership-price" style="color: #915CE5;">$100</p>
+                    <p class="membership-per">per year</p>
+                    <ul class="membership-benefits">
+                        <li>✓ Unlimited admission for 2 adults + 4 children</li>
+                        <li>✓ Members-only previews</li>
+                        <li>✓ 15% discount at museum shop</li>
+                        <li>✓ Quarterly newsletter</li>
+                        <li>✓ Free coat check</li>
+                        <li>✓ Priority event registration</li>
+                        <li>✓ Exclusive family programs</li>
+                    </ul>
+                    <button class="membership-btn" style="background-color: #915CE5;" onclick="showMembershipForm('Family')">Choose Family</button>
+                </div>
+
+                <div class="membership-card" style="border-color: #FC6C55;">
+                    <h3 style="color: #FC6C55;">Patron</h3>
+                    <p class="membership-price" style="color: #FC6C55;">$125</p>
+                    <p class="membership-per">per year</p>
+                    <ul class="membership-benefits">
+                        <li>✓ All Family membership benefits</li>
+                        <li>✓ Invitation to exclusive events</li>
+                        <li>✓ 20% discount at museum shop</li>
+                        <li>✓ Behind-the-scenes tours</li>
+                        <li>✓ Free guest passes (4 per year)</li>
+                        <li>✓ Recognition in annual report</li>
+                        <li>✓ Priority access to exhibitions</li>
+                        <li>✓ Curator talks and lectures</li>
+                    </ul>
+                    <button class="membership-btn" style="background-color: #FC6C55;" onclick="showMembershipForm('Patron')">Choose Patron</button>
+                </div>
+
+            </div>
+
+            <div class="membership-faq">
+                <h3>Membership FAQs</h3>
+                <p><strong>When does my membership begin?</strong></p>
+                <p>Your membership begins on the date of purchase and is valid for one year from that date.</p>
+                <p><strong>Can I upgrade my membership?</strong></p>
+                <p>Yes! You can upgrade your membership at any time. The difference in price will be prorated based on your remaining membership period.</p>
+                <p><strong>Are memberships tax-deductible?</strong></p>
+                <p>Yes, a portion of your membership is tax-deductible. You will receive a receipt for tax purposes with your membership confirmation.</p>
+                <p><strong>What if I need to cancel?</strong></p>
+                <p>Memberships are non-refundable. However, you may transfer your membership to another individual within your membership year.</p>
+            </div>
+
+            <div id="membershipForm">
+                <div class="form-card">
+                    <h2>Complete Your Membership</h2>
+                    <form id="membershipFormInput">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>First Name <span style="color:red">*</span></label>
+                                <input type="text" name="firstname" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name <span style="color:red">*</span></label>
+                                <input type="text" name="lastname" required>
+                            </div>
+                        </div>
+
+                        <label>Email <span style="color:red">*</span></label>
+                        <input type="email" name="email" required><br><br>
+
+                        <label>Phone Number <span style="color:red">*</span></label>
+                        <input type="tel" name="phone" required><br><br>
+
+                        <label>Street Address <span style="color:red">*</span></label>
+                        <input type="text" name="address" required><br><br>
+
+                        <div class="form-row-three">
+                            <div class="form-group">
+                                <label>City <span style="color:red">*</span></label>
+                                <input type="text" name="city" required>
+                            </div>
+                            <div class="form-group">
+                                <label>State <span style="color:red">*</span></label>
+                                <input type="text" name="state" required>
+                            </div>
+                            <div class="form-group">
+                                <label>ZIP Code <span style="color:red">*</span></label>
+                                <input type="text" name="zip" required>
+                            </div>
+                        </div>
+
+                        <label>Selected Membership</label>
+                        <input type="text" name="membership" id="selectedMembership" readonly><br><br>
+
+                        <button type="button" onclick="submitMembership()">Complete Membership Registration</button>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="footer">© <p id="copyYear"></p> MonoMuse. All rights reserved.</footer>
+
+    </div>
+</body>
+</html>

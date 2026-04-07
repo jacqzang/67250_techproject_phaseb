@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jacqueline Zang">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>MonoMuse - Buy Tickets</title>   
+    <link rel="stylesheet" href="../static/style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+
+        <header class="header"> 
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+            <h1>Buy Tickets</h1>
+        </header>
+
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a class="cta" href="tickets.html">Buy Tickets</a>
+            <a href="membership.html">Membership</a>
+            <button id="hamburger" onclick="toggleNav()">☰</button>
+        </nav>
+
+        <main class="main tickets-main">
+            <h2>Ticket Prices</h2>
+            <table>
+                <tr>
+                    <th>Ticket Type</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>General</td>
+                    <td>General admission for all visitors 18 and over. Under 18 free of charge.</td>
+                    <td>$18</td>
+                </tr>
+                <tr>
+                    <td>Student</td>
+                    <td>Valid student ID required at entry.</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Member</td>
+                    <td>Valid member ID required at entry.</td>
+                    <td>$15</td>
+                </tr>
+            </table>
+
+            <h2>Available Dates</h2>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Event</th>
+                    <th>Availability</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>April 17, 2026</td>
+                    <td>Digital Exhibition</td>
+                    <td>Available</td>
+                    <td><button onclick="showForm()">Buy Now</button></td>
+                </tr>
+                <tr>
+                    <td>April 18, 2026</td>
+                    <td>Digital Palette - Code and Art</td>
+                    <td>Available</td>
+                    <td><button onclick="showForm()">Buy Now</button></td>
+                </tr>
+                <tr>
+                    <td>April 19, 2026</td>
+                    <td>Digital Playground Festival</td>
+                    <td>Available</td>
+                    <td><button onclick="showForm()">Buy Now</button></td>
+                </tr>
+                <tr>
+                    <td>April 23, 2026</td>
+                    <td>Interactive Media Experiments</td>
+                    <td>Available</td>
+                    <td><button onclick="showForm()">Buy Now</button></td>
+                </tr>
+            </table>
+
+            <div id="purchaseForm">
+                <h1>Checkout</h1>
+                <div class="form-card">
+                    <form id="ticketForm">
+                        <label>Name (required)</label>
+                        <input type="text" name="name" placeholder="Enter your name" required><br><br>
+
+                        <label>Email (required)</label>
+                        <input type="email" name="email" placeholder="Enter your email" required><br><br>
+
+                        <label>Visit Date (required)</label>
+                        <input type="date" name="date" required><br><br>
+
+                        <label>Ticket Type (required)</label>
+                        <select name="tickettype" id="ticketType" onchange="calculatePrice()" required>
+                            <option value="">Select ticket type</option>
+                            <option value="18">General - $18</option>
+                            <option value="10">Student - $10</option>
+                            <option value="15">Member - $15</option>
+                        </select><br><br>
+
+                        <label>Ticket Quantity (required)</label>
+                        <input type="number" name="quantity" id="ticketQuantity" min="1" max="10" value="1" onchange="calculatePrice()" required><br><br>
+
+                        <label>Total Price</label>
+                        <p id="totalPrice" style="font-size: 1.5rem; font-weight: bold; color: #915CE5;">$0.00</p>
+
+                        <label>Zip Code (optional - must be 5 digits if filled)</label>
+                        <input type="text" name="zipcode" id="zipCode" placeholder="Enter zip code" maxlength="5"><br><br>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="mailinglist"> Join our mailing list
+                        </label><br><br>
+
+                        <button type="button" onclick="submitForm()">Place Order</button>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="footer">© <p id="copyYear"></p> MonoMuse. All rights reserved.</footer>
+
+    </div>
+</body>
+</html>

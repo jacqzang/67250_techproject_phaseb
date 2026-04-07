@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jacqueline Zang">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>MonoMuse - Order Confirmation</title>   
+    <link rel="stylesheet" href="../static/style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear(); loadConfirmation();">
+    <div class="container">
+
+        <header class="header"> 
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+            <h1>MonoMuse</h1>
+        </header>
+
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a class="cta" href="tickets.html">Buy Tickets</a>
+            <a href="membership.html">Membership</a>
+            <button id="hamburger" onclick="toggleNav()">☰</button>
+        </nav>
+
+        <main class="main">
+            <div class="confirmation-box">
+                <div class="confirmation-icon">✓</div>
+                <h1 style="color: #62B3F7;">Order Confirmed!</h1>
+                <p>Thank you for your purchase. Your tickets have been booked successfully.</p>
+                
+                <div class="confirmation-details">
+                    <h2>Order Summary</h2>
+                    <p><strong>Name:</strong> <span id="confName"></span></p>
+                    <p><strong>Ticket Type:</strong> <span id="confType"></span></p>
+                    <p><strong>Quantity:</strong> <span id="confQuantity"></span></p>
+                    <p><strong>Visit Date:</strong> <span id="confDate"></span></p>
+                    <p><strong>Total:</strong> <span id="confTotal" style="color: #915CE5; font-weight: bold; font-size: 1.2rem;"></span></p>
+                </div>
+                <a class="cta" href="../index.html" style="text-decoration: none; display: inline-block; margin-top: 20px;">Return Home</a>
+            </div>
+        </main>
+
+        <footer class="footer">© <p id="copyYear"></p> MonoMuse. All rights reserved.</footer>
+
+    </div>
+</body>
+</html>
