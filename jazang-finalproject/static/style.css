@@ -672,4 +672,25 @@ table button:hover {
     .explore-bottom {
         grid-template-columns: 1fr;
     }
+
+    .exhibition-card {
+        min-width: 100%;
+    }
+
+    .exhibitions-track {
+        flex-direction: column;
+    }
+
+    .slider-btn {
+        display: none;
+    }
+
+    table {
+        width: 100%;
+        font-size: 0.75rem;
+    }
+
+    td, th {
+        padding: 6px;
+    }
 }
